@@ -16,7 +16,7 @@ def plot_template_sensitivity(output_path, words, res_dir, model, dataset):
         sample = pd.read_csv(filepath)
         mean_probs = sample[[f'yes_prob_{i}' for i in range(5)]].mean().values
         all_probs.append(mean_probs)
-    probabilities = np.array(all_probs).flatten() / 100
+    probabilities = np.array(all_probs).flatten()
 
     plot_data = pd.DataFrame({
         'Trait Words': words * 5,
@@ -27,11 +27,12 @@ def plot_template_sensitivity(output_path, words, res_dir, model, dataset):
     plt.figure(figsize=(21, 6))
     sns.set(style="whitegrid")
     sns.scatterplot(data=plot_data, x='Trait Words', y='Prob', hue='Templates', s=60)
-    plt.xticks(rotation=90)
-    plt.ylabel('Mean of P(Yes | image, trait, template)')
-    plt.xlabel('Personality Trait')
+    plt.xticks(rotation=90, fontsize=14)
+    plt.yticks(fontsize=14)
+    plt.ylabel('Mean of P(Yes | image, trait, template)', fontsize=16)
+    plt.xlabel('Personality Trait', fontsize=16)
     plt.ylim(0.2, 0.8)
-    plt.legend(title='', loc='upper center', bbox_to_anchor=(0.5, 1.15), ncol=5)
+    plt.legend(title='', loc='upper center', bbox_to_anchor=(0.5, 1.15), ncol=5, fontsize=14)
     plt.tight_layout()
     plt.gca().margins(x=0.015)
     plt.savefig(output_path, format='pdf', dpi=600, bbox_inches='tight')
@@ -76,7 +77,7 @@ dataset = 'fairface'
 models = ['Phi-4-multimodal-instruct', 'blip2-opt-2.7b', 'Qwen2.5-VL-3B-Instruct', 'llava-1.5-7b-hf','paligemma2-3b-mix-224']
 
 for model in tqdm(models, desc="Processing model"):
-    res_dir = os.path.join('.', f'{model}_results')
+    res_dir = os.path.join('..', f'{model}_results')
     plot_path = os.path.join(output_dir, f"template_sensitivity_{model}.pdf")
     plot_template_sensitivity(plot_path, words, res_dir, model, dataset)
     df = run_anova_and_friedman(res_dir)
