@@ -3,11 +3,11 @@
 # Ask Me Again Differently: GRAS for Measuring Bias in Vision Language Models on Gender, Race, Age, and Skin Tone
 [![Project Website](https://img.shields.io/badge/Project-Website-blue)](https://shaivimalik.github.io/gras_bench/)  [![arXiv](https://img.shields.io/badge/arXiv-2508.18989-b31b1b.svg)](https://arxiv.org/abs/2508.18989)
 
-[**Shaivi Malik**](https://shaivimalik.github.io/)<sup>1</sup> · [**Hasnat Md Abdullah**](https://github.com/Hasnat79)<sup>2</sup> · [**Sriparna Saha**](https://www.iitp.ac.in/~sriparna/)<sup>3</sup> · [**Amit Sheth**](https://amit.aiisc.ai/)<sup>4</sup> 
+[**Shaivi Malik**](https://shaivimalik.github.io/)<sup>1,2</sup> · [**Hasnat Md Abdullah**](https://github.com/Hasnat79)<sup>2,3</sup> · [**Sriparna Saha**](https://www.iitp.ac.in/~sriparna/)<sup>2,4</sup> · [**Amit Sheth**](https://amit.aiisc.ai/)<sup>2</sup> 
 
-<sup>1</sup>Guru Gobind Singh Indraprastha University&emsp;<sup>2</sup>University of Illinois at Urbana-Champaign&emsp;
+<sup>1</sup>Guru Gobind Singh Indraprastha University&emsp;<sup>2</sup>AI Institute, University of South Carolina&emsp;
 
-<sup>3</sup> IIT Patna&emsp;<sup>4</sup> AI Institute, University of South Carolina
+<sup>3</sup>University of Illinois at Urbana-Champaign&emsp;<sup>4</sup>IIT Patna
 
 <img src="./assets/method.png" alt="method image" width="800"/>
 
@@ -136,11 +136,11 @@ We introduced the GRAS Benchmark, combining GRAS image dataset, 100 personality 
 Please cite our work if you find our work helpful in your work.
 
 ```bibtex
-@article{malik2025ask,
-  title={Ask Me Again Differently: GRAS for Measuring Bias in Vision Language Models on Gender, Race, Age, and Skin Tone},
-  author={Malik, Shaivi and Abdullah, Hasnat Md and Saha, Sriparna and Sheth, Amit},
-  journal={arXiv preprint arXiv:2508.18989},
-  url={https://arxiv.org/abs/2508.18989},
-  year={2025}
+@inproceedings{malik2026ask,
+  title={Ask me again differently: Gras for measuring bias in vision language models on gender, race, age, and skin tone},
+  author={Malik, Shaivi and Abdullah, Hasnat Md and Saha, Sriparna and Sheth, Amit P},
+  booktitle={Findings of the Association for Computational Linguistics: EACL 2026},
+  pages={2327--2388},
+  year={2026}
 }
 ```
